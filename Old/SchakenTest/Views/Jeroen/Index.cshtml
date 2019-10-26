@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<form method="post">
+    <input type="submit" id="test" value="Administrator maken">
+    <p></p>
+    <input />
+    @Html.ActionLink(linkText: "linkText", actionName: "ActionName", routeValues: "", controllerName: "Jeroen", htmlAttributes: new { @class = "btn btn-primary", @style = "color:white" })
+    <p></p>
+    <a class="btn btn-primary" href="/Jeroen/actionName" style="color:black">linkText</a>
+
+    <input value="input type button doet het niet" type="button" href="/Jeroen/actionName" />
+
+    @Html.ActionLink(linkText: "nog een linkText", actionName: "ActionName", routeValues: "", controllerName: "Jeroen", htmlAttributes: new { type = "button"})
+
+    <p></p>
+</form>
+<form action="/Jeroen/actionName" method="post">
+    <button type="submit">OK</button>
+
+</form>
+@Html.BeginForm(method: FormMethod.Post, controllerName: "Jeroen", actionName: "actionName")
+{
+<button type="submit">OK2</button>
+}

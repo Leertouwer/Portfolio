@@ -1,0 +1,31 @@
+@*@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject RoleManager<IdentityUser> RoleManager
+
+if (RoleManager.)*@
+
+    <nav id="navbar-example2" class="navbar navbar-light bg-light">
+        <ul class="nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+                <div class="dropdown-menu">
+
+                    <a class="dropdown-item" href="/tournements">Tournement Registration</a>
+                    <a class="dropdown-item" href="/contestents">Contestent Registration</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/_Tournement/tournements">Tournement Registration2</a>
+                    <a class="dropdown-item" href="/_Contestent/contestents">Contestent Registration2</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" asp-area="_Tournement" asp-page="/tournements">Tournement Registration3</a>
+                    <a class="dropdown-item" asp-area="_Contestent" asp-page="/contestents">Contestent Registration3</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" asp-area="_Tournement" asp-page="/tournements/Index">Tournement Registration4</a>
+                    <a class="dropdown-item" asp-area="_Contestent" asp-page="/contestents/Index">Contestent Registration4</a>
+
+
+                </div>
+            </li>
+        </ul>
+    </nav>
+

@@ -1,0 +1,23 @@
+@*@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject RoleManager<IdentityUser> RoleManager
+
+if (RoleManager.)*@
+
+    <nav id="navbar-example2" class="navbar navbar-light bg-light">
+        <ul class="nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/applicationusers">User Management</a>
+                    <a class="dropdown-item" href="/applicationroles">Role Management</a>
+                    <a class="dropdown-item" href="/applicationuserroles">Role Membertship</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/Admin/Tournements">Tournement Registration</a>
+                    <a class="dropdown-item" href="/Admin/Contestents">Contestent Registration</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+

@@ -1,0 +1,42 @@
+﻿@*@Model  = IEnumerable<(Guid,Guid,string,string)>*@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                RoleName
+            </th>
+            <th>
+                UserName
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.List)
+        {
+            <tr>
+                <td>
+                    @item.Item3
+                </td>
+                <td>
+                    @item.Item4
+                </td>
+                <td>
+
+
+                    @Html.ActionLink("Delete", "Delete", new { UserID=item.Item2,RoleId=item.Item1})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

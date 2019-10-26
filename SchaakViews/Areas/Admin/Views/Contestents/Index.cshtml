@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Schaak.Areas.Admin.Models.ContestentsListViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnlistDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TournementName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TournementStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TournementEndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TournementId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsersId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnlistDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TournementName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistrationStartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistrationEndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TournementStartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TournementEndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TournementId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UsersId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ContestentId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ContestentId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ContestentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

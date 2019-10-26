@@ -1,0 +1,18 @@
+﻿@page
+@model Schaken.Pages.Test.IModel
+@{
+    ViewData["Title"] = "Test Index";
+}
+
+<h1>Index</h1>
+
+<form method="post">
+    <p></p>
+    <input type="submit" id="test" value="Administrator maken">
+    <p></p>
+    <input type="button"
+           value="Go Somewhere Else"
+           onclick="location.href='@Html.ActionLink("Berichtje", "Bericht");'" />
+
+    <p></p>
+</form>

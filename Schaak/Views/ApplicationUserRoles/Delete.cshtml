@@ -1,0 +1,41 @@
+﻿@model ApplicationUserRole<Guid>
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Application UserRole</h4>
+    <hr />
+    <dl class="row">
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="UserId" />
+        <input type="hidden" asp-for="RoleId" />
+        <table>
+            <thead>
+                <tr>
+                    <th>RoleName</th>
+                    <th>UserName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label asp-for="RoleId" class="control-label">@Model.RoleName</label>
+                    </td>
+                    <td>
+                        <label asp-for="RoleId" class="control-label">@Model.UserName</label>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
