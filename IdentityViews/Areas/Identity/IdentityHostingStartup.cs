@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SchaakData;
 
 [assembly: HostingStartup(typeof(Schaak.Areas.Identity.IdentityHostingStartup))]
 namespace Schaak.Areas.Identity
