@@ -1,14 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using IdentityData;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SchaakData;
-using IdentityData;
-using SchaakData;
-using IdentityData;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using IdentityData;
 
 namespace Schaak.Controllers
 {
@@ -70,8 +66,10 @@ namespace Schaak.Controllers
             {
                 if (!await _roleManager.RoleExistsAsync(applicationRole.Name))
                 {
-                    var role = new ApplicationRole();
-                    role.Name = applicationRole.Name;
+                    var role = new ApplicationRole
+                    {
+                        Name = applicationRole.Name
+                    };
                     await _roleManager.CreateAsync(role);
                 }
 

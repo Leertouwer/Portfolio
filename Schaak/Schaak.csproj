@@ -34,7 +34,6 @@
   <ItemGroup>
     <ProjectReference Include="..\IdentityViews\IdentityViews.csproj" />
     <ProjectReference Include="..\SchaakData\SchaakData.csproj" />
-    <ProjectReference Include="..\SchaakModules\SchaakModules.csproj" />
     <ProjectReference Include="..\SchaakViews\SchaakViews.csproj" />
   </ItemGroup>
 

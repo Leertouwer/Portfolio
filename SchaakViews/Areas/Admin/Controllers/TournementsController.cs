@@ -134,15 +134,14 @@ namespace Schaak.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var tournement = await _context.Tournement
-                .FirstOrDefaultAsync(m => m.Id == id);
+            TournementViewModel tournementViewModel = await TournementViewModel.GetWithId(_context, id);
 
-            if (tournement == null)
+            if (tournementViewModel == null)
             {
                 return NotFound();
             }
 
-            return View(tournement);
+            return View(tournementViewModel);
         }
 
         // POST: Admin/Tournements/Delete/5

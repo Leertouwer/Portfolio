@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using IdentityData;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using IdentityData;
-using SchaakData;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using IdentityData;
 
 namespace Schaak.Controllers
 {
@@ -53,7 +50,7 @@ namespace Schaak.Controllers
 
 
             var test2 = _context.Users.Join(_context.UserRoles.DefaultIfEmpty(), a => a.Id, b => b.UserId, (a, b) => new { a.Email, RoleId = b.RoleId == null ? Guid.Empty : b.RoleId });
-            var test4 = _context.UserRoles.Join(_context.Users.DefaultIfEmpty(), a => a.UserId, b => b.Id, (a, b) => new { UserId = a.UserId == null ? Guid.Empty : a.UserId, Id = b.Id == null ? Guid.Empty : b.Id, Email = b.Email == null ? string.Empty : b.Email });
+            var test4 = _context.UserRoles.Join(_context.Users.DefaultIfEmpty(), a => a.UserId, b => b.Id, (a, b) => new { UserId = a.UserId == null ? Guid.Empty : a.UserId, Id = b.Id == null ? Guid.Empty : b.Id, Email = b.Email ?? string.Empty });
 
 
 

@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (ApplicationUser user in role.Users)
+                    @foreach (IdentityData.ApplicationUser user in role.Users)
                     {
                         <tr>
                             <td>@user.Email</td>
@@ -57,7 +57,7 @@
             </thead>
 
             <tbody>
-                @foreach (ApplicationUser item in ViewBag.Join)
+                @foreach (IdentityData.ApplicationUser item in ViewBag.Join)
                 {
                     <form asp-action="Index">
                         <input type="hidden" name="Id" value="@item.Id" />
