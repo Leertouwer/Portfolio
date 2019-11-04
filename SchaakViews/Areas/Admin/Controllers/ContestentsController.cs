@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Schaak.Areas.Admin.Models;
 using SchaakData;
 using System.Linq;
@@ -14,12 +15,13 @@ namespace Schaak.Areas.Admin.Controllers
     {
         private readonly ApplContext _appContext;
         private readonly IdContext _idContext;
+        private readonly ILogger _logger;
 
-
-        public ContestentsController(ApplContext appContext, IdContext idContext)
+        public ContestentsController(ApplContext appContext, IdContext idContext, ILogger<ContestentsController> logger)
         {
             _appContext = appContext;
             _idContext = idContext;
+            _logger = logger;
         }
 
         // GET: Admin/Contestents
@@ -44,6 +46,11 @@ namespace Schaak.Areas.Admin.Controllers
                                              TournementId = c.TournementId
                                          });
             var ret = await sqlTask;
+
+            _logger.BeginScope("beginscope");
+
+            _logger.LogCritical("critical");
+            _logger.LogError("error");
 
             var sqlTask2 = Task.Run(() =>
                 from c in _appContext.Contestent

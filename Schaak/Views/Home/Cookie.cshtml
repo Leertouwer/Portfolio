@@ -1,0 +1,18 @@
+﻿@model Schaak.Controllers.HomeController.CookieModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="~/js/jquery/jquery.min.js"></script>
+<div class="text-center">
+    <h1 class="display-4">Cookie Test</h1>
+    <p>Deze pagina was bedoeld om een tijd op een cookie te zetten.</p>
+    <p>Na het opslaan van de cookie blijft het één dag bewaard.</p>
+</div>
+<p></p>
+<form class="form-check-input" method="post">
+    @SetAntiforgeryCookieAndHeader()
+    <div>
+        <textarea asp-for="CookieText" class="text-dark" cols="30" rows="4"></textarea>
+        <input type="submit" class="input-group-append" value="Cookie opslaan." href="javascript:msgbox('De cookie blijft één dag bewaard.')" />
+    </div>
+</form>

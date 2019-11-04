@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace IdentityViews.MyFeature.Pages
+namespace FrontEndFolio.MyFeature.Pages
 {
-    public class Page1Model : PageModel
+    public class Page3Model : PageModel
     {
         public void OnGet()
         {
