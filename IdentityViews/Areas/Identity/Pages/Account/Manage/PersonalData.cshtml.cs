@@ -1,10 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using IdentityData;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using IdentityData;
-using IdentityData;
+using System.Threading.Tasks;
 
 namespace Schaak.Areas.Identity.Pages.Account.Manage
 {

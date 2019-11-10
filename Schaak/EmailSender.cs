@@ -6,9 +6,6 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
 namespace SchaakModules
 {
     public enum EmailErrorLevel
@@ -22,10 +19,9 @@ namespace SchaakModules
 
     public class EmailSender : IEmailSender
     {
-        ILogger _Ilogger;
-        /// <summary>
-        Exception _LastException;
-        /// </summary>
+        private ILogger _Ilogger;
+        private Exception _LastException;
+
         public EmailErrorLevel EmailErrorLevel { get; set; } 
         
         public EmailSender(ILogger ilogger)
@@ -33,9 +29,9 @@ namespace SchaakModules
             _Ilogger = ilogger;
             EmailErrorLevel = EmailErrorLevel.Ok;
         }
+
         public Task SendEmailAsync(string email, string subject, string message)
         {
-           
             try
             {
                 System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient
@@ -83,8 +79,8 @@ namespace SchaakModules
                 _Ilogger.LogTrace(ex.Message);
             }
             return Task.CompletedTask ;
-
         }
+
         public string ErrorMessage()
         {
             if (_LastException != null)

@@ -39,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!--<Content Include="wwwroot\JQueryMenu6\*.*" CopyToPublishDirectory="PreserveNewest" />-->
+    <Content Include="wwwroot\JQueryMenu6\*.*" CopyToPublishDirectory="PreserveNewest" />
     <EmbeddedResource Include="wwwroot\JQueryMenu6\*" />
     <EmbeddedResource Include="Areas\*\wwwroot\**\*" />
   </ItemGroup>

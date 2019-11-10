@@ -1,0 +1,25 @@
+﻿body {
+background-color:azure;
+}
+body{
+    padding:0;
+    margin:0;
+}
+#mainbord {
+    background-color: dimgrey;
+    border-width: 0;
+    border-color: darkgray;
+}
+.zwart {
+    background-color: black;
+    width: 24%;
+    height: 24%;
+}
+.wit {
+    background-color: white;
+    width: 24%;
+    height: 24%;
+}
+#title{
+    width:5%;
+}
