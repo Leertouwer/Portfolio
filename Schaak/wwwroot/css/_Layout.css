@@ -1,0 +1,106 @@
+﻿/*Eigen werk*/
+header {
+    background-color: darkgreen;
+}
+
+iframe {
+    width: 100%;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%
+}
+#iframeiframe {
+    width: 100%;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%
+}
+#iframemodal {
+    width: 100%;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.modal {
+    padding: 0 !important;
+}
+
+.modal-dialog {
+    max-width: 94% !important;
+    height: 94%;
+    padding: 0;
+    margin: 10;
+}
+
+.modal-content {
+    border-radius: 0 !important;
+    height: 96%;
+}
+
+/*.modal-lg {
+}*/
+
+
+/*Uit app.js*/
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+html {
+    position: relative;
+    min-height: 99.8%;
+}
+
+body {
+    margin-bottom: 0px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    height: 28px;
+    line-height: 28px; /* Vertically center the text there */
+}

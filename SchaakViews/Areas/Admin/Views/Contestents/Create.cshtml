@@ -1,0 +1,41 @@
+﻿@model Schaak.Areas.Admin.Models.ContestentsCreateEditModelView
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>ContestentsViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="TournementId" class="control-label"></label>
+                <select asp-for="TournementId" class="form-control" asp-items="Model.Tournments" />
+
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="UsersId" class="control-label"></label>
+                <select asp-for="UsersId" class="form-control" asp-items="Model.AspNetUsers" />
+                <p></p>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

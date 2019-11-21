@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2><small>Bootstrap/JQuery/Popper</small></h2>
+        <h3><small>Javascript / CSS test pagina's. </small></h3>
+        <h4><small>Nieuwe tech wordt hier getest.</small></h4>
+        <button id="displaybutton" onclick="ChangeLetterType();" data-tooltip="Only $5 one-time payment!">Change Font</button>
+        <button id="displaybutton" onclick="RemoveLetterType();" data-tooltip="Only $5 one-time payment!">Remove Font</button>
+        <p style="height:50px"></p>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+        <table class="table-dark table-striped table-hover" id="maintable">
+            <thead id="mainthead" class="thead-light">
+                <tr>
+                    <th>header 1</th>
+                    <th>header 2</th>
+                    <th>header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>
+                        <button type="button" class="btn btn-secondary" data-toggle="popover" data-placement="top" title="Tooltip on the top" id="displaybutton" onclick="MakeTableWhite();">Maak tabel wit</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-secondary" data-toggle="popover" data-placement="bottom" title="Tooltip on the bottom" id="displaybutton" onclick="MakeTableBlack();">Maak tabel zwart</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <environment include="Development">
+        <script src="/lib/jquery/dist/jquery.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+
+
+
+
+
+
+    <script src="JavaScript.js" type="text/javascript"></script>
+</body>
+</html>

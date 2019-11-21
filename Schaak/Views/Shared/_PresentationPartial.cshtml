@@ -1,0 +1,38 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+<nav id="navbar-example2" class="navbar navbar-light">
+    <ul class="nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Presentation</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/Home/Cookie">Cookie</a>
+                <a class="dropdown-item" href="/Home/Email">Email</a>
+                <div role="separator" class="dropdown-divider"></div>
+                @if (SignInManager.IsSignedIn(User) && User.IsInRole("Administrators"))
+                {
+                    <a class="text-dark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User Management</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/applicationusers">Users</a>
+                    <a class="dropdown-item" href="/applicationroles">Roles</a>
+                    <a class="dropdown-item" href="/applicationuserroles">Role Membertship</a>
+                }
+
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="text-dark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/Admin/Tournements">Tournement Registration</a>
+                <a class="dropdown-item" href="/Admin/Contestents">Contestent Registration</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="text-dark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Javascript</a>
+                <a class="dropdown-item" href="/iframe?iframeurl=/JQueryMenu/Index.html">JQuery Menu generated HTML</a>
+                <a class="dropdown-item" href="/iframe?iframeurl=/JQuery/3SchoolStart.html">JQuery Events met CSS</a>
+                <a class="dropdown-item" href="/iframe?iframeurl=/Bootstrap1/Index.html">Iframe Bootstrap with JQuery</a>
+                <a class="dropdown-item" href="/modal?modalurl=/JQuery/3SchoolStart.html">Modal JQuery Events met CSS</a>
+                <a class="dropdown-item" href="/modal?modalurl=/Bootstrap1/Index.html">Modal Bootstrap with JQuery</a>
+                <a class="dropdown-item" href="javascript:loadInModal('/JQuery/3SchoolStart.html');">Load in Modal JQuery Events met CSS</a>
+                <a class="dropdown-item" href="javascript:loadInModal('/Bootstrap1/Index.html');">Load in Modal  Bootstrap with JQuery</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+

@@ -1,0 +1,37 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<script src="https://kit.fontawesome.com/3c47c9154c.js" crossorigin="anonymous"></script>
+@if (SignInManager.IsSignedIn(User))
+{
+    <nav id="navbar-example2" class="navbar navbar-dark">
+        <ul class="nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-2x"></i></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@User.Identity.Name</a>
+
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+}
+else
+{ 
+    <nav id="navbar-example2" class="navbar navbar-dark">
+        <ul class="nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-2x"></i></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+}
+

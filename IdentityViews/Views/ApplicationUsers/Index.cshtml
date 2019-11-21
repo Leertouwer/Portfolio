@@ -1,0 +1,92 @@
+﻿@model List<Schaak.Controllers.RoleUsers>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+        @foreach (Schaak.Controllers.RoleUsers role in ViewBag.GroupJoin)
+        {
+            <p>
+                <h1>@role.RoleName</h1>
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Admin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (IdentityData.ApplicationUser user in role.Users)
+                    {
+                        <tr>
+                            <td>@user.Email</td>
+                            <td>@user.FirstName</td>
+                            <td>@user.LastName</td>
+                            <td>@user.Admin</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+        <p><a asp-action="Create">Create New</a></p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        UserName
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        FirstName
+                    </th>
+                    <th>
+                        LastName
+                    </th>
+                    <th>
+                        Admin
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (IdentityData.ApplicationUser item in ViewBag.Join)
+                {
+                    <form asp-action="Index">
+                        <input type="hidden" name="Id" value="@item.Id" />
+                        <tr>
+                            <td>
+                                @item.UserName
+                            </td>
+                            <td>
+                                @item.Email
+                            </td>
+                            <td>
+                                <input Name="FirstName" value="@item.FirstName" class="form-control" />
+                            </td>
+                            <td>
+                                <input Name="LastName" value="@item.LastName" class="form-control" />
+                            </td>
+                            <td>
+                                <input type="checkbox" class="form-control" onclick="location.href='ApplicationUsers/switchadmin/@item.Id'" @(item.Admin ? "Checked" : "") />
+                            </td>
+                            <td>
+                                <input type="submit" value="Save" class="btn btn-primary" asp-action="Save" />
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    </form>
+                }
+            </tbody>
+        </table>
