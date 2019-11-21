@@ -1,0 +1,16 @@
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\SchaakData.deps.json
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\SchaakData.runtimeconfig.json
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\SchaakData.runtimeconfig.dev.json
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\SchaakData.dll
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\bin\Debug\netcoreapp2.2\SchaakData.pdb
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.RazorAssemblyInfo.cache
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.RazorAssemblyInfo.cs
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.AssemblyInfoInputs.cache
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.AssemblyInfo.cs
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.RazorTargetAssemblyInfo.cache
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.dll
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.pdb
+C:\Users\jeroe\source\repos\core\Portfolio\SchaakData\obj\Debug\netcoreapp2.2\SchaakData.csprojAssemblyReference.cache
