@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\Schaak\\Schaak.csproj": {}
+    "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\schaak\\Schaak.csproj": {}
   },
   "projects": {
     "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\IdentityViews\\IdentityViews.csproj": {
@@ -77,9 +77,25 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "MySql.Data.Entity": {
+              "target": "Package",
+              "version": "[7.0.7-m61, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.9.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
             }
           },
           "imports": [
@@ -280,14 +296,14 @@
         }
       }
     },
-    "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\Schaak\\Schaak.csproj": {
+    "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\schaak\\Schaak.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\Schaak\\Schaak.csproj",
+        "projectUniqueName": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\schaak\\Schaak.csproj",
         "projectName": "Schaak",
-        "projectPath": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\Schaak\\Schaak.csproj",
+        "projectPath": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\schaak\\Schaak.csproj",
         "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\Schaak\\obj\\",
+        "outputPath": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\schaak\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -306,9 +322,6 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\FrontEndPortFolio\\FrontEndPortFolio.csproj": {
-                "projectPath": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\FrontEndPortFolio\\FrontEndPortFolio.csproj"
-              },
               "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\IdentityViews\\IdentityViews.csproj": {
                 "projectPath": "C:\\Users\\jeroe\\source\\repos\\core\\Portfolio\\IdentityViews\\IdentityViews.csproj"
               },
@@ -365,9 +378,25 @@
               "target": "Package",
               "version": "[1.9.5, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "MySql.Data.Entity": {
+              "target": "Package",
+              "version": "[7.0.7-m61, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.9.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
             },
             "Serilog": {
               "target": "Package",
